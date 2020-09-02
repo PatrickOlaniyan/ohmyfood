@@ -1,0 +1,159 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.header__image{
+    text-align: center;
+    padding: 3% 3%;
+}
+
+.header__image--scale{
+    width: 40%;
+}
+
+.location__heading{
+    text-align: center;
+    padding: 3%;
+    background-color: #e9e9e9; 
+    border-top: 3px solid #c9c9c9;
+}
+
+.icon__paragraph{
+    font-family: 'Roboto', sans-serif;
+    padding: auto auto auto 15px;
+}
+
+.booking__section{
+    display: block;
+    background-color: #F3F3F3;
+    padding: 9% 3%;
+    text-align: center;
+}
+
+.booking__section--light-grey{
+    color: darkgray;
+}
+
+.booking__button {
+    background: linear-gradient(to bottom, #ff79d9 5%, #9256dc 100%);
+    background-color: #ff79d9;
+    border-radius: 28px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+}
+
+.booking__button:hover {
+    background: linear-gradient(to bottom, #9256dc 5%, #ff79d9 100%);
+    background-color: #9256dc;
+}
+
+.booking__button:focus {
+    outline: none;
+}
+
+.booking__button:active {
+    position: relative;
+    top: 1px;
+}
+
+.guidance__section{
+    display: flex;
+    flex-direction: column;
+    padding: 7% 3%;
+}
+
+.guidance__card{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #F3F3F3;
+    width: 90%;
+    align-content: center;
+    text-align: left;
+    border-radius: 20px;
+    margin: 0 0 5% 0;
+    padding: 3%;
+    color: darkgray;
+    position: relative;
+}
+
+.guidance__card:hover{
+	background-color: rgb(146,86,220, 0.1);
+}
+
+.guidance__card:hover .fas{
+	color: #9256dc;
+}
+
+.number__icon{
+    background-color: #9256dc;
+	text-align: center;
+	align-self: center;
+    border-radius: 50%;
+    position: relative;
+	left: -25px;
+	top: -3px;
+	padding: 3px 8px;
+	color: #fff; 
+}
+
+.restaurant__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(236, 234, 234); 
+    padding: 3%;
+}
+
+.restaurant__heading{
+    width: 94%;
+}
+
+.restaurant__card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    display: inline-block;
+    align-content: center;
+    text-align: left;
+    border-radius: 20px;
+    margin: 0 auto 5% auto;
+}
+
+.restaurant__image{
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.restaurant__container{
+    padding: 0 3%;
+}
+
+.footer__header{
+    background-color: #383738;
+    color: #ffffff;
+    padding: 5%;
+}
+
+.footer__header a{
+    color: white;
+    text-decoration-line: none;
+}
+
+.footer__image{
+    width: 15%;
+    filter: invert(1);
+    padding: 0 0 3% 0;
+}

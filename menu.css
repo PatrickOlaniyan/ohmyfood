@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.header__image{
+    width: 100%;
+    text-align: center;
+}
+
+.logo__image{
+    width: 60%;
+}
+
+.menu__image{  
+    display: block;
+    align-items: center;
+}
+
+.menu__image--width{  
+    width: 100%;
+}
+
+.restaurant__heading{
+    width: 94%;
+}
+
+.description__heading{
+    color: darkgrey;
+    width: 94%;  
+    display: inline-block;
+    position: relative;
+}
+
+.description__heading:before{
+    content: "";
+    position: absolute;
+    width: 10%;
+    bottom: -4px;
+    border-bottom: 4px solid #99E2D0;
+}
+
+.menu__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3F3F3; 
+    padding: 3% 3% 7% 3%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.menu__card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    width: 90%;
+    display: inline-block;
+    align-content: center;
+    text-align: left;
+    border-radius: 20px;
+    margin: 0 0 5% 0;
+    padding: 0 3%;
+}
+
+.menu__card--justify{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__container{
+    padding: 0 3%;
+}
+
+.booking__button {
+    background: linear-gradient(to bottom, #ff79d9 5%, #9256dc 100%);
+    background-color: #ff79d9;
+    border-radius: 28px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+}
+
+.booking__button:hover {
+    background: linear-gradient(to bottom, #9256dc 5%, #ff79d9 100%);
+    background-color: #9256dc;
+}
+
+.booking__button:active {
+    position: relative;
+    top: 1px;
+}
+
+.booking__button:focus {
+    outline: none;
+}
+
+.footer__header{
+    background-color: #383738;
+    color: #ffffff;
+    padding: 5%;
+}
+
+.footer__header a{
+    color: white;
+    text-decoration-line: none;
+}
+
+.footer__image{
+    width: 15%;
+    filter: invert(1);
+    padding: 0 0 3% 0;
+}
+
+.icon__paragraph{
+    font-family: 'Roboto', sans-serif;
+}
