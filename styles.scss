@@ -1,0 +1,259 @@
+$purple: #9256dc; 
+$pink: #ff79d9;
+$light-grey-background:#F3F3F3;
+$dark-grey-background: #e9e9e9;
+$dark-grey-boarder: #c9c9c9;
+$space-grey: #383738;
+$normal-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$deep-shadow: 3px 6px 10px 3px rgba(0, 0, 0, 0.2);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.icon__paragraph {
+    font-family: 'Roboto', sans-serif;
+    padding: auto auto auto 3%;
+}   
+
+.loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $light-grey-background;
+    z-index: 1;
+
+    &.loader__page--hidden {
+        animation: fade-out-and-hide ease-in 2.5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        overflow: hidden;
+    } 
+
+    .loader__icon {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+
+        &:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: #666 transparent #666 transparent;
+            animation: spinner 1.5s linear infinite;
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            margin-left: -60px;
+        }
+    }
+}
+
+.header__image {
+    text-align: center;
+    padding: 3%;
+
+    .header__image--scale {
+        width: 40%;
+    }    
+}
+
+.location__heading {
+    text-align: center;
+    padding: 3%;
+    background-color: $dark-grey-background;
+    border-top: 3px solid $dark-grey-boarder; 
+}
+
+.booking__section {
+    display: block;
+    background-color: $light-grey-background;
+    padding: 9% 3%;
+    text-align: center;
+
+    .booking__section--light-grey {
+        color: darkgray;
+    }
+
+    .booking__button {
+        background: linear-gradient(to bottom, $pink 5%, $purple 100%);
+        background-color: $pink;
+        border-radius: 28px;
+        border: 1px solid white;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 17px;
+        padding: 16px 31px;
+        text-decoration: none;
+
+        &:hover {
+            background: linear-gradient(to bottom, $purple 5%, $pink 100%);
+            background-color: $purple;
+        }
+        
+        &:focus {
+            outline: none;
+        }
+        
+        &:active {
+            position: relative;
+            top: 1px;
+        } 
+    }
+}
+
+.guidance__section {
+    display: flex;
+    flex-direction: column;
+    padding: 7% 3%;
+
+    .guidance__card {
+        display: flex;
+        flex-direction: row;
+        box-shadow: $normal-shadow;
+        background-color: $light-grey-background;
+        width: 90%;
+        align-content: center;
+        text-align: left;
+        border-radius: 20px;
+        margin: 0 0 5% 0;
+        padding: 3%;
+        color: darkgray;
+        position: relative;
+
+        &:hover {
+            background-color: rgba(146, 86, 220, 0.1);
+            box-shadow: $deep-shadow;
+
+            .fas {
+                color: $purple;
+            }
+        }
+        
+        .number__icon {
+            background-color: $purple;
+            text-align: center;
+            align-self: center;
+            border-radius: 50%;
+            position: relative;
+            left: -5%;
+            top: -3%;
+            padding: 3px 8px;
+            color: white;
+        }
+    }
+}
+
+.restaurant__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light-grey-background;
+    padding: 3%;
+
+    .restaurant__heading {
+        width: 94%;
+    }
+
+    .restaurant__card {
+        box-shadow: $normal-shadow;
+        background-color: white;
+        display: inline-block;
+        align-content: center;
+        text-align: left;
+        border-radius: 20px;
+        margin: 0 auto 5% auto;
+
+        &:hover {
+            box-shadow: $deep-shadow;
+        }
+
+        .restaurant__image {
+            width: 100%;
+            height: 250px;
+            max-width: 450px;
+            max-height: 250px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .restaurant__container {
+            padding: 0 3%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .restaurant__details {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .fa-heart {
+                font-size: 30px;
+                padding: 8% 2% 10% 0;
+                color: white;
+                text-shadow: 0 0 3px black;
+
+                &:hover {
+                    color: $purple;
+                    transition: 1s ease-in;
+                    transform: scale(1.15);
+                    text-shadow: 0 0 3px white;
+                }
+            }
+        }
+    }
+}
+
+.footer__header {
+    background-color: $space-grey;
+    color: white;
+    padding: 5%;
+
+    a {
+        color: white;
+        text-decoration-line: none;
+    }
+
+    .footer__image {
+        width: 15%;
+        filter: invert(1);
+        padding: 0 0 3% 0;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-out-and-hide {
+    0% {
+        opacity: 1.0;
+    }
+    99% {
+        opacity: 0;
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
+}
+
