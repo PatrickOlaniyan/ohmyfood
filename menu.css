@@ -67,13 +67,12 @@ h1 {
   width: 100%;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
+  animation: fade-in 2s;
+  /* IE */
+  -moz-animation: fade-in 2s;
   /* Firefox */
-  -webkit-animation: fadein 2s;
+  -webkit-animation: fade-in 2s;
   /* Safari and Chrome */
-  -o-animation: fadein 2s;
-  /* Opera */
   position: relative;
   z-index: 3;
   margin: 60% 0 0 0;
@@ -173,8 +172,12 @@ h1 {
 }
 
 .menu__section .menu__card .menu__button:hover + .add__button .fas {
-  -webkit-animation: spin 1s;
-  animation: spin 1s;
+  animation: spin 2s;
+  /* IE */
+  -moz-animation: spin 2s;
+  /* Firefox */
+  -webkit-animation: spin 2s;
+  /* Safari and Chrome */
 }
 
 .menu__section .menu__card .menu__button .menu__button--justify {
@@ -240,7 +243,8 @@ h1 {
   padding: 0 0 3% 0;
 }
 
-@keyframes fadein {
+@-webkit-keyframes fade-in {
+  /* Safari and Chrome */
   from {
     opacity: 0;
   }
@@ -249,13 +253,67 @@ h1 {
   }
 }
 
-@-webkit-keyframes fadein {
-  /* Safari and Chrome */
+@keyframes fade-in {
+  /* IE */
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes spin {
+  /* Safari and Chrome */
+  /* Safari and Chrome*/
+  from {
+    -webkit-transform: rotate(270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+  /* Firefox */
+  from {
+    -moz-transform: rotate(270deg);
+  }
+  to {
+    -moz-transform: rotate(0deg);
+  }
+  /* IE */
+  from {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  /* IE */
+  /* Safari and Chrome*/
+  from {
+    -webkit-transform: rotate(270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+  /* Firefox */
+  from {
+    -moz-transform: rotate(270deg);
+  }
+  to {
+    -moz-transform: rotate(0deg);
+  }
+  /* IE */
+  from {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 /*# sourceMappingURL=menu.css.map */
