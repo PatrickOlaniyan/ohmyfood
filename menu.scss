@@ -1,0 +1,272 @@
+$purple: #9256dc; 
+$pink: #ff79d9;
+$mint: #99E2D0;
+$light-grey-background:#F3F3F3;
+$dark-grey-background: #e9e9e9;
+$dark-grey-boarder: #c9c9c9;
+$space-grey: #383738;
+$normal-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$deep-shadow: 3px 6px 10px 3px rgba(0, 0, 0, 0.2);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.icon__paragraph {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header__image {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .icon__link{
+        display: block;
+        align-self: center;
+        justify-self: center;
+        padding: 3%;
+        font-size: 28px;
+    }
+
+    .logo__image {
+        padding: 2% 20% 2% 0;
+        width: 60%;
+    }
+}
+
+.menu__image {
+    display: block;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+
+    .menu__image--width {
+        width: 100%;
+    }
+}
+
+.menu__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light-grey-background;
+    padding: 3% 0 7% 0;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    animation: fade-in 2s; /* IE */
+    -moz-animation: fade-in 2s; /* Firefox */
+    -webkit-animation: fade-in 2s; /* Safari and Chrome */
+    position: relative;
+    z-index: 3;
+    margin: 60% 0 0 0;
+
+    .restaurant__header {
+        width: 94%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .fa-heart {
+            font-size: 30px;
+            padding: 3% 2% 2% 0;
+            color: white;
+            text-shadow: 0 0 3px black;
+
+            &:hover {
+                color: $purple;
+                transition: 1s ease-in;
+                transform: scale(1.15);
+                text-shadow: 0 0 3px white;
+            }
+        }
+    } 
+    
+    .description__heading {
+        color: darkgrey;
+        width: 94%;
+        display: inline-block;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            bottom: -6px;
+            border-bottom: 4px solid $mint;
+        }
+    }
+
+    .menu__card {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 0 0 3% 3%;
+
+        .menu__button {
+            box-shadow: $normal-shadow;
+            background-color: white;
+            width: 95%;
+            text-align: left;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            border-radius: 20px;
+            padding: 0 3%;
+            margin: 0 0 1% 0;
+            border: none;
+
+            &:hover {
+                background-color: white;
+                width: 80%;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                box-shadow: $deep-shadow;
+
+                +.add__button {
+                    opacity: 1;
+                    width: 15%;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    background: $mint;
+                    color: white;
+                    font-size: 200%;
+                    box-shadow: $deep-shadow;
+                    border: none;
+
+                    .fas {
+                        animation: spin 2s; /* IE */
+                        -moz-animation: spin 2s; /* Firefox */
+                        -webkit-animation: spin 2s; /* Safari and Chrome */
+                    }
+                }
+            }
+
+            .menu__button--justify {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .add__button {
+            opacity: 0;
+            margin: 0 0 1% 0;
+        }
+    }
+}
+
+.booking__button {
+    background: linear-gradient(to bottom, $pink 5%, $purple 100%);
+    background-color: $pink;
+    border-radius: 28px;
+    border: 1px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+
+    &:hover {
+        background: linear-gradient(to bottom, $purple 5%, $pink 100%);
+        background-color: $purple;
+    }
+    
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+.footer__header {
+    background-color: $space-grey;
+    color: white;
+    padding: 5%;
+
+    a {
+        color: white;
+        text-decoration-line: none;
+    }
+    
+    .footer__image {
+        width: 15%;
+        filter: invert(1);
+        padding: 0 0 3% 0;
+    }   
+}
+
+@mixin keyframes($fade-in) {
+    @-webkit-keyframes #{$fade-in} { /* Safari and Chrome */
+        @content;
+    }
+ 
+    @-moz-keyframes #{$fade-in} { /* Firefox */
+        @content;
+    }
+    
+    @keyframes #{$fade-in} { /* IE */
+        @content;
+    }
+}
+
+@include keyframes(fade-in) {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin keyframes($spin) {
+    @-webkit-keyframes #{$spin} { /* Safari and Chrome */
+        @content;
+    }
+
+    @-moz-keyframes #{$spin} { /* Firefox */
+        @content;
+    }
+
+    @keyframes #{$spin} { /* IE */
+        @content;
+    }
+}
+
+@include keyframes(spin) {
+    /* Safari and Chrome*/
+    from {
+        -webkit-transform: rotate(270deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+
+    /* Firefox */
+    from {
+        -moz-transform: rotate(270deg);
+    }
+    to {
+        -moz-transform: rotate(0deg);
+    }
+
+    /* IE */
+    from {
+        transform: rotate(270deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
