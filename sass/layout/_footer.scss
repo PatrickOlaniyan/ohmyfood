@@ -1,0 +1,16 @@
+.footer__header {
+    background-color: $space-grey;
+    color: white;
+    padding: 5%;
+
+    a {
+        color: white;
+        text-decoration-line: none;
+    }
+
+    .footer__image {
+        width: 15%;
+        filter: invert(1);
+        padding: 0 0 3% 0;
+    }
+}

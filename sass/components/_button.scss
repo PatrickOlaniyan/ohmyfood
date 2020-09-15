@@ -1,0 +1,27 @@
+.booking__button {
+    background: linear-gradient(to bottom, $pink 5%, $purple 100%);
+    background-color: $pink;
+    border-radius: 28px;
+    border: 1px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+
+    &:hover {
+        background: linear-gradient(to bottom, $purple 5%, $pink 100%);
+        background-color: $purple;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:active {
+        position: relative;
+        top: 1px;
+    } 
+}

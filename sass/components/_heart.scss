@@ -1,0 +1,13 @@
+.fa-heart {
+    font-size: 30px;
+    padding: 8% 2% 10% 0;
+    color: white;
+    text-shadow: 0 0 3px black;
+
+    &:hover {
+        color: $purple;
+        transition: 1s ease-in;
+        transform: scale(1.15);
+        text-shadow: 0 0 3px white;
+    }
+}
