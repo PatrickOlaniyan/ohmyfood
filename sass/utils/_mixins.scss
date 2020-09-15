@@ -1,0 +1,129 @@
+@mixin keyframes($spinner) {
+    @keyframes #{$spinner} { /* IE */
+        @content;
+    }
+    
+    @-moz-keyframes #{$spinner} { /* Firefox */
+        @content;
+    }
+    
+    @-webkit-keyframes #{$spinner} { /* Safari and Chrome */
+        @content;
+    }
+}
+
+@include keyframes(spinner) {
+    /* IE */
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+    /* Firefox */
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+
+    /* Safari and Chrome */
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@mixin keyframes($fade-out-and-hide) {
+    @keyframes #{$fade-out-and-hide} { /* IE */
+        @content;
+    }
+    
+    @-moz-keyframes #{$fade-out-and-hide} { /* Firefox */
+        @content;
+    }
+    
+    @-webkit-keyframes #{$fade-out-and-hide} { /* Safari and Chrome */
+        @content;
+    }
+}
+
+@include keyframes(fade-out-and-hide) {
+    0% {
+        opacity: 1.0;
+    }
+    99% {
+        opacity: 0;
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@mixin keyframes($fade-in) {
+    @-webkit-keyframes #{$fade-in} { /* Safari and Chrome */
+        @content;
+    }
+ 
+    @-moz-keyframes #{$fade-in} { /* Firefox */
+        @content;
+    }
+    
+    @keyframes #{$fade-in} { /* IE */
+        @content;
+    }
+}
+
+@include keyframes(fade-in) {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin keyframes($spin) {
+    @-webkit-keyframes #{$spin} { /* Safari and Chrome */
+        @content;
+    }
+
+    @-moz-keyframes #{$spin} { /* Firefox */
+        @content;
+    }
+
+    @keyframes #{$spin} { /* IE */
+        @content;
+    }
+}
+
+@include keyframes(spin) {
+    /* Safari and Chrome*/
+    from {
+        -webkit-transform: rotate(270deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+
+    /* Firefox */
+    from {
+        -moz-transform: rotate(270deg);
+    }
+    to {
+        -moz-transform: rotate(0deg);
+    }
+
+    /* IE */
+    from {
+        transform: rotate(270deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
