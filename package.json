@@ -1,0 +1,27 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./home.scss:./home.css ./menu.scss:./menu.css -w --style compressed",
+    "prefix": "postcss ./home.css ./menu.css --use autoprefixer -d ./prefixed"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss": "^8.0.2",
+    "postcss-cli": "^7.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickOlaniyan/ohmyfood.git"
+  },
+  "author": "Patrick Olaniyan",
+  "license": "ISC",
+  "browserslist": "last 4 versions",  
+  "bugs": {
+    "url": "https://github.com/PatrickOlaniyan/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/PatrickOlaniyan/ohmyfood#readme"
+}

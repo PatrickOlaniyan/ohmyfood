@@ -1,53 +1,20 @@
 @mixin keyframes($spinner) {
-    @keyframes #{$spinner} { /* IE */
-        @content;
-    }
-    
-    @-moz-keyframes #{$spinner} { /* Firefox */
-        @content;
-    }
-    
-    @-webkit-keyframes #{$spinner} { /* Safari and Chrome */
+    @keyframes #{$spinner} { 
         @content;
     }
 }
 
 @include keyframes(spinner) {
-    /* IE */
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
-
-    /* Firefox */
-    0% {
-        -moz-transform: rotate(0deg);
-    }
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-
-    /* Safari and Chrome */
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
 }
 
 @mixin keyframes($fade-out-and-hide) {
-    @keyframes #{$fade-out-and-hide} { /* IE */
-        @content;
-    }
-    
-    @-moz-keyframes #{$fade-out-and-hide} { /* Firefox */
-        @content;
-    }
-    
-    @-webkit-keyframes #{$fade-out-and-hide} { /* Safari and Chrome */
+    @keyframes #{$fade-out-and-hide} { 
         @content;
     }
 }
@@ -66,15 +33,7 @@
 }
 
 @mixin keyframes($fade-in) {
-    @-webkit-keyframes #{$fade-in} { /* Safari and Chrome */
-        @content;
-    }
- 
-    @-moz-keyframes #{$fade-in} { /* Firefox */
-        @content;
-    }
-    
-    @keyframes #{$fade-in} { /* IE */
+    @keyframes #{$fade-in} { 
         @content;
     }
 }
@@ -89,37 +48,12 @@
 }
 
 @mixin keyframes($spin) {
-    @-webkit-keyframes #{$spin} { /* Safari and Chrome */
-        @content;
-    }
-
-    @-moz-keyframes #{$spin} { /* Firefox */
-        @content;
-    }
-
-    @keyframes #{$spin} { /* IE */
+    @keyframes #{$spin} { 
         @content;
     }
 }
 
 @include keyframes(spin) {
-    /* Safari and Chrome*/
-    from {
-        -webkit-transform: rotate(270deg);
-    }
-    to {
-        -webkit-transform: rotate(0deg);
-    }
-
-    /* Firefox */
-    from {
-        -moz-transform: rotate(270deg);
-    }
-    to {
-        -moz-transform: rotate(0deg);
-    }
-
-    /* IE */
     from {
         transform: rotate(270deg);
     }

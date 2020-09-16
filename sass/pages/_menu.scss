@@ -41,9 +41,7 @@
     width: 100%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    animation: fade-in 2s; /* IE */
-    -moz-animation: fade-in 2s; /* Firefox */
-    -webkit-animation: fade-in 2s; /* Safari and Chrome */
+    animation: fade-in 2s;
     position: relative;
     z-index: 3;
     margin: 60% 0 0 0;
@@ -109,9 +107,7 @@
                     border: none;
 
                     .fas {
-                        animation: spin 2s; /* IE */
-                        -moz-animation: spin 2s; /* Firefox */
-                        -webkit-animation: spin 2s; /* Safari and Chrome */
+                        animation: spin 2s; 
                     }
                 }
             }
