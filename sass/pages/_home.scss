@@ -13,9 +13,7 @@
     z-index: 1;
 
     &.loader__page--hidden {
-        animation: fade-out-and-hide ease-in 2.5s; /* IE */
-        -webkit-animation: fade-out-and-hide ease-in 2.5s; /* Safari and Chrome */
-        -moz-animation: fade-out-and-hide ease-in 2.5s; /* Firefox */
+        animation: fade-out-and-hide ease-in 2.5s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
         overflow: hidden;
@@ -35,9 +33,7 @@
             border-radius: 50%;
             border: 6px solid #fff;
             border-color: $mint transparent $mint transparent;
-            animation: spinner 1.5s linear infinite; /* IE */
-            -webkit-animation: spinner 1.5s linear infinite; /* Safari and Chrome */
-            -moz-animation: spinner 1.5s linear infinite; /* Firefox */
+            animation: spinner 1.5s linear infinite; 
             position: absolute;
             top: 46%;
             left: 50%;
