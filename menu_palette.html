@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
-    <link rel="stylesheet" href="prefixed/menu.css">
+    <link rel="stylesheet" href="menu.css">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +22,10 @@
     <article class="menu__section">
         <div class="restaurant__header">
             <h1>The Full Palette</h1>
-            <i class="fas fa-heart"></i>
+            <div class="heart__button">
+                <input type="checkbox" id="heart__button" name="heart__button"/>
+                <label for="heart__button"></label>
+            </div>        
         </div>
         <p class="description__heading">ENTREES</p>
         <aside class="menu__card">
@@ -33,9 +36,10 @@
                     <p>25€</p>
                 </section>
             </button>
-            <button class="add__button">
-                <i class="fas fa-check-circle"></i>
-            </button>
+            <div class="tick__checkbox">
+                <input type="checkbox" id="tick__checkbox" name="tick__checkbox"/>
+                <label for="tick__checkbox"></label>
+            </div>
         </aside>
         <aside class="menu__card">
             <button class="menu__button">

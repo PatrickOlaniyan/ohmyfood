@@ -135,9 +135,15 @@
         text-align: left;
         border-radius: 20px;
         margin: 0 auto 5% auto;
+        position: relative;
 
         &:hover {
             box-shadow: $deep-shadow;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
         }
 
         .restaurant__image {
@@ -146,13 +152,12 @@
             max-height: 250px;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
-            position: relative;
         }
     
-        .restaurant__image--first {
+        .restaurant__image--text {
             position: absolute;
-            bottom: 5%;
-            right: 15%;
+            top: 25px;
+            right: 25px;
             color: #5d9c8c;
             background-color: $mint;
             padding: 1% 5%;
@@ -161,29 +166,6 @@
 
             h4 {
                 margin: 0;
-            }
-            
-            @media (min-width: 501px){
-                opacity: 0;
-            }
-        }
-
-        .restaurant__image--second {
-            position: absolute;
-            bottom: -35%;
-            right: 15%;
-            color: #5d9c8c;
-            background-color: $mint;
-            padding: 1% 5%;
-            border-radius: 2px;
-            z-index: 3;
-
-            h4 {
-                margin: 0;
-            }
-
-            @media (min-width: 501px){
-                opacity: 0;
             }
         }
 

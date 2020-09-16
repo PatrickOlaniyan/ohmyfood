@@ -128,20 +128,32 @@ h1 {
   top: 1px;
 }
 
-.fa-heart {
-  font-size: 30px;
-  padding: 8% 2% 10% 0;
-  color: white;
-  text-shadow: 0 0 3px black;
+.heart__button {
+  padding: 8% 2% 0 0;
 }
 
-.fa-heart:hover {
+.heart__button input[type='checkbox'] {
+  display: none;
+  font-size: 30px;
+  padding: 8% 2% 10% 0;
+  z-index: 3;
+}
+
+.heart__button input[type='checkbox']:checked + label:before {
+  font-weight: 600;
   color: #9256dc;
   -webkit-transition: 1s ease-in;
   transition: 1s ease-in;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  text-shadow: 0 0 3px white;
+}
+
+.heart__button input[type='checkbox'] + label:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f004";
+  color: #acacac;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .footer__header {
@@ -224,6 +236,7 @@ h1 {
   border-top-right-radius: 30px;
   -webkit-animation: fade-in 2s;
           animation: fade-in 2s;
+  /* IE */
   position: relative;
   z-index: 3;
   margin: 60% 0 0 0;

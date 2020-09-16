@@ -41,7 +41,7 @@
     width: 100%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    animation: fade-in 2s;
+    animation: fade-in 2s; /* IE */
     position: relative;
     z-index: 3;
     margin: 60% 0 0 0;
@@ -88,6 +88,8 @@
             margin: 0 0 1% 0;
             border: none;
 
+
+
             &:hover {
                 background-color: white;
                 width: 80%;
@@ -107,7 +109,7 @@
                     border: none;
 
                     .fas {
-                        animation: spin 2s; 
+                        animation: spin 2s;
                     }
                 }
             }
