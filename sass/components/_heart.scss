@@ -1,13 +1,35 @@
-.fa-heart {
-    font-size: 30px;
-    padding: 8% 2% 10% 0;
-    color: white;
-    text-shadow: 0 0 3px black;
+.heart__button {
+    padding: 8% 2% 0 0;
 
-    &:hover {
-        color: $purple;
-        transition: 1s ease-in;
-        transform: scale(1.15);
-        text-shadow: 0 0 3px white;
+	input[type='checkbox'] {
+		display: none;
+		font-size: 30px;
+		padding: 8% 2% 10% 0;
+        z-index: 3;
+        
+		&:checked {
+			+ {
+				label {
+					&:before {
+						font-weight: 600;
+						color: $purple;
+						transition: 1s ease-in;
+						transform: scale(1.15);
+					}
+				}
+			}
+		}
     }
+    
+	input[type='checkbox']+ {
+		label {
+			&:before {
+				font-family: 'Font Awesome 5 Free';
+                content: "\f004";
+                color: #acacac;
+				font-size: 30px;
+				cursor: pointer;
+			}
+		}
+	}
 }

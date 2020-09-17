@@ -128,20 +128,32 @@ h1 {
   top: 1px;
 }
 
-.fa-heart {
-  font-size: 30px;
-  padding: 8% 2% 10% 0;
-  color: white;
-  text-shadow: 0 0 3px black;
+.heart__button {
+  padding: 8% 2% 0 0;
 }
 
-.fa-heart:hover {
+.heart__button input[type='checkbox'] {
+  display: none;
+  font-size: 30px;
+  padding: 8% 2% 10% 0;
+  z-index: 3;
+}
+
+.heart__button input[type='checkbox']:checked + label:before {
+  font-weight: 600;
   color: #9256dc;
   -webkit-transition: 1s ease-in;
   transition: 1s ease-in;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  text-shadow: 0 0 3px white;
+}
+
+.heart__button input[type='checkbox'] + label:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f004";
+  color: #acacac;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .footer__header {
@@ -330,6 +342,7 @@ h1 {
   text-align: left;
   border-radius: 20px;
   margin: 0 auto 5% auto;
+  position: relative;
 }
 
 .restaurant__section .restaurant__card:hover {
@@ -337,19 +350,23 @@ h1 {
           box-shadow: 3px 6px 10px 3px rgba(0, 0, 0, 0.2);
 }
 
+.restaurant__section .restaurant__card a {
+  text-decoration: none;
+  color: black;
+}
+
 .restaurant__section .restaurant__card .restaurant__image {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   max-height: 250px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  position: relative;
 }
 
-.restaurant__section .restaurant__card .restaurant__image--first {
+.restaurant__section .restaurant__card .restaurant__image--text {
   position: absolute;
-  bottom: 5%;
-  right: 15%;
+  top: 25px;
+  right: 25px;
   color: #5d9c8c;
   background-color: #99E2D0;
   padding: 1% 5%;
@@ -357,35 +374,8 @@ h1 {
   z-index: 3;
 }
 
-.restaurant__section .restaurant__card .restaurant__image--first h4 {
+.restaurant__section .restaurant__card .restaurant__image--text h4 {
   margin: 0;
-}
-
-@media (min-width: 501px) {
-  .restaurant__section .restaurant__card .restaurant__image--first {
-    opacity: 0;
-  }
-}
-
-.restaurant__section .restaurant__card .restaurant__image--second {
-  position: absolute;
-  bottom: -35%;
-  right: 15%;
-  color: #5d9c8c;
-  background-color: #99E2D0;
-  padding: 1% 5%;
-  border-radius: 2px;
-  z-index: 3;
-}
-
-.restaurant__section .restaurant__card .restaurant__image--second h4 {
-  margin: 0;
-}
-
-@media (min-width: 501px) {
-  .restaurant__section .restaurant__card .restaurant__image--second {
-    opacity: 0;
-  }
 }
 
 .restaurant__section .restaurant__card .restaurant__container {
