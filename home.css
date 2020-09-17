@@ -357,7 +357,7 @@ h1 {
 
 .restaurant__section .restaurant__card .restaurant__image {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   max-height: 250px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;

@@ -297,16 +297,17 @@ h1 {
   border: none;
 }
 
-.menu__section .menu__card .menu__button:hover {
+.menu__section .menu__card .menu__button:focus {
   background-color: white;
   width: 80%;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   -webkit-box-shadow: 3px 6px 10px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 6px 10px 3px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
-.menu__section .menu__card .menu__button:hover + .add__button {
+.menu__section .menu__card .menu__button:focus + .add__button {
   opacity: 1;
   width: 15%;
   border-top-right-radius: 20px;
@@ -319,7 +320,7 @@ h1 {
   border: none;
 }
 
-.menu__section .menu__card .menu__button:hover + .add__button .fas {
+.menu__section .menu__card .menu__button:focus + .add__button .fas {
   -webkit-animation: spin 2s;
           animation: spin 2s;
 }

@@ -88,14 +88,13 @@
             margin: 0 0 1% 0;
             border: none;
 
-
-
-            &:hover {
+            &:focus {
                 background-color: white;
                 width: 80%;
                 border-top-right-radius: 0px;
                 border-bottom-right-radius: 0px;
                 box-shadow: $deep-shadow;
+                outline: none;
 
                 +.add__button {
                     opacity: 1;
